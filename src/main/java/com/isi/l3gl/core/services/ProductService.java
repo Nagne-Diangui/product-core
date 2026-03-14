@@ -1,5 +1,7 @@
 package com.isi.l3gl.core.services;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.isi.l3gl.core.models.Product;
@@ -15,5 +17,9 @@ public class ProductService {
 
     public Product createProduct(Product product) {
         return productRepository.save(product);
+    }
+
+    public List<Product> listProducts() {
+        return productRepository.findAll();
     }
 }

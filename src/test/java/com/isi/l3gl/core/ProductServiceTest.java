@@ -30,4 +30,12 @@ class ProductServiceTest {
         assertNotNull(savedProduct.getId());
         assertEquals("Laptop", savedProduct.getName());
     }
+
+    @Test
+    void testListProducts() {
+
+        var products = productService.listProducts();
+
+        assertTrue(products.size() >= 3);
+    }
 }
