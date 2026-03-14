@@ -1,4 +1,4 @@
-package com.isi.l3gl.core.models;
+package sn.isi.l3gl.core.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

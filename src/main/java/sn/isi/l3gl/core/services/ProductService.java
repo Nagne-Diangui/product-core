@@ -1,14 +1,13 @@
-package com.isi.l3gl.core.services;
+package sn.isi.l3gl.core.services;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.isi.l3gl.core.models.Product;
-import com.isi.l3gl.core.repositories.ProductRepository;
-
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import sn.isi.l3gl.core.models.Product;
+import sn.isi.l3gl.core.repositories.ProductRepository;
 
 @Service
 @RequiredArgsConstructor

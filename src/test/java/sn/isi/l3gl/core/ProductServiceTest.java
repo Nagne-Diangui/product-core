@@ -1,12 +1,12 @@
-package com.isi.l3gl.core;
+package sn.isi.l3gl.core;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.isi.l3gl.core.models.Product;
-import com.isi.l3gl.core.services.ProductService;
+import sn.isi.l3gl.core.models.Product;
+import sn.isi.l3gl.core.services.ProductService;
 
 @SpringBootTest
 class ProductServiceTest {
