@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.isi.l3gl.core.models.Product;
 import com.isi.l3gl.core.repositories.ProductRepository;
 
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 
 @Service
@@ -21,5 +22,13 @@ public class ProductService {
 
     public List<Product> listProducts() {
         return productRepository.findAll();
+    }
+
+    @Transactional
+    public Product updateQuantity(Long id, int newQuantity) {
+        Product product = productRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Produit non trouvé"));
+        product.setQuantity(newQuantity);
+        return productRepository.save(product);
     }
 }
