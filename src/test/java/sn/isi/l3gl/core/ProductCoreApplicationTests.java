@@ -1,4 +1,4 @@
-package com.isi.l3gl.product_core;
+package sn.isi.l3gl.core;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

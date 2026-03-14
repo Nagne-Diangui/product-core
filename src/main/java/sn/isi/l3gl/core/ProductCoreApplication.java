@@ -1,4 +1,4 @@
-package com.isi.l3gl.core;
+package sn.isi.l3gl.core;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
