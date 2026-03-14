@@ -38,4 +38,21 @@ class ProductServiceTest {
 
         assertTrue(products.size() >= 3);
     }
+
+    @Test
+    void testUpdateQuantity() {
+        // 1. Arrange
+        Product product = new Product();
+        product.setName("Smartphone");
+        product.setDescription("iPhone 13");
+        product.setPrice(999.0);
+        product.setQuantity(20);
+        Product savedProduct = productService.createProduct(product);
+
+        // 2. Act
+        Product updatedProduct = productService.updateQuantity(savedProduct.getId(), 15);
+
+        // 3. Assert
+        assertEquals(15, updatedProduct.getQuantity());
+    }
 }
