@@ -55,4 +55,28 @@ class ProductServiceTest {
         // 3. Assert
         assertEquals(15, updatedProduct.getQuantity());
     }
+
+    @Test
+    void testCountLowStockProducts() {
+        // 1. Arrange
+        Product product1 = new Product();
+        product1.setName("Headphones");
+        product1.setDescription("Sony WH-1000XM4");
+        product1.setPrice(350.0);
+        product1.setQuantity(3);
+        productService.createProduct(product1);
+
+        Product product2 = new Product();
+        product2.setName("Monitor");
+        product2.setDescription("LG UltraFine 4K");
+        product2.setPrice(700.0);
+        product2.setQuantity(2);
+        productService.createProduct(product2);
+
+        // 2. Act
+        long lowStockCount = productService.countLowStockProducts();
+
+        // 3. Assert
+        assertTrue(lowStockCount >= 2);
+    }
 }
